@@ -42,7 +42,8 @@ namespace Practica18
 		private void Change_Click(object sender, RoutedEventArgs e)
 		{
 			StringBuilder errors = new StringBuilder();
-			if (ID.Text.Length == 0 && FirstName.Text.Length == 0 && SecondName.Text.Length == 0 && Team.Text != "Динамо" && Team.Text != "Спартак" && PlayTeam.Text.Length == 0 && Matches.Text.Length == 0)
+			if (ID.Text.Length == 0 && FirstName.Text.Length == 0 && SecondName.Text.Length == 0 && Team.Text != "Динамо" &&
+				Team.Text != "Спартак" && PlayTeam.Text.Length == 0 && Matches.Text.Length == 0)
 			{
 				errors.AppendLine("Не все обязательные поля заполнены или заполнены некорректно");
 			}
