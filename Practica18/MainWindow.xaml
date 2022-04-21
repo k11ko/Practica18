@@ -1,0 +1,56 @@
+﻿<Window x:Class="Practica18.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practica18"
+        mc:Ignorable="d"
+        Title="Практическая работа 18" Height="342" Width="1125" ResizeMode="NoResize" Loaded="Window_Loaded">
+    <Grid>
+        <Menu HorizontalAlignment="Left" Height="18" VerticalAlignment="Top" Width="190">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Выход" Click="Exit_Click"/>
+            </MenuItem>
+            <MenuItem Header="Таблица">
+                <MenuItem Header="Добавить запись" Click="AddNote_Click"/>
+                <MenuItem Header="Изменить запись" Click="ChangeNote_Click"/>
+                <MenuItem Header="Удалить запись" Click="DelNote_Click"/>
+            </MenuItem>
+            <MenuItem Header="Информация">
+                <MenuItem Header="О программе" Click="Info_Click"/>
+            </MenuItem>
+        </Menu>
+        <DataGrid x:Name="tabl" HorizontalAlignment="Left" Height="272" Margin="10,23,0,0" VerticalAlignment="Top" Width="887" IsReadOnly="True" AutoGenerateColumns="False" ItemsSource="{Binding}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Номер" Binding="{Binding Номер}"/>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding Фамилия}"/>
+                <DataGridTextColumn Header="Имя" Binding="{Binding Имя}"/>
+                <DataGridTextColumn Header="Отчество" Binding="{Binding Отчество}"/>
+                <DataGridTextColumn Header="Команда" Binding="{Binding Команда}"/>
+                <DataGridTextColumn Header="СыгранныхСезонов" Binding="{Binding СыгранныхСезонов}"/>
+                <DataGridTextColumn Header="ЧислоЗаброшенныхШайб" Binding="{Binding ЧислоЗаброшенныхШайб}"/>
+                <DataGridTextColumn Header="КолГолевыхПередач" Binding="{Binding КолГолевыхПередач}"/>
+                <DataGridTextColumn Header="ШтрафВремя" Binding="{Binding ШтрафВремя}"/>
+                <DataGridTextColumn Header="КолСыгранныхМатчей" Binding="{Binding КолСыгранныхМатчей}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Добавить" HorizontalAlignment="Left" Margin="912,26,0,0" VerticalAlignment="Top" Width="75" Click="AddNote_Click"/>
+        <Button Content="Изменить" HorizontalAlignment="Left" Margin="912,51,0,0" VerticalAlignment="Top" Width="75" Click="ChangeNote_Click"/>
+        <Button Content="Удалить" HorizontalAlignment="Left" Margin="912,76,0,0" VerticalAlignment="Top" Width="75" Click="DelNote_Click"/>
+        <GroupBox Header="Поиск по Фамилии" HorizontalAlignment="Left" Height="93" Margin="912,101,0,0" VerticalAlignment="Top" Width="187">
+            <Grid>
+                <TextBox x:Name="findSecondName" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <Button Content="Поиск" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Width="75" Click="FindNote_Click"/>
+                <Button x:Name="findSecondNameClear" Content="Очистить" HorizontalAlignment="Left" Margin="90,40,0,0" VerticalAlignment="Top" Width="75" Click="findSecondNameClear_Click"/>
+            </Grid>
+    </GroupBox>
+        <GroupBox Header="Фильтр по команде" HorizontalAlignment="Left" Height="93" Margin="912,199,0,0" VerticalAlignment="Top" Width="187">
+            <Grid>
+                <TextBox x:Name="findTeam" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <Button Content="Поиск" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Width="75" Click="filteredNote_Click"/>
+                <Button Content="Вернуть" HorizontalAlignment="Left" Margin="90,40,0,0" VerticalAlignment="Top" Width="75" Click="filteredNoteback_Click"/>
+            </Grid>
+        </GroupBox>
+
+    </Grid>
+</Window>

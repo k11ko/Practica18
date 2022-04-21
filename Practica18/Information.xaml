@@ -1,0 +1,15 @@
+﻿<Window x:Class="Practica18.Information"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practica18"
+        mc:Ignorable="d"
+        Title="О программе" Height="374.619" Width="525.888" ResizeMode="NoResize">
+    <Grid>
+        <Image Source="Images/Task.png" HorizontalAlignment="Left" Height="180" Margin="10,10,0,0" VerticalAlignment="Top" Width="463"/>
+        <Image Source="Images/Var.png" HorizontalAlignment="Left" Height="81" Margin="10,195,0,0" VerticalAlignment="Top" Width="463"/>
+        <Label Content="Работу выполнил студент группы ИСП-31 Константинов Кирилл" HorizontalAlignment="Left" Margin="10,281,0,0" VerticalAlignment="Top" FontSize="16"/>
+
+    </Grid>
+</Window>

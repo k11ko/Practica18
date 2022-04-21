@@ -1,0 +1,38 @@
+﻿<Window x:Class="Practica18.ChangeNote"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practica18"
+        mc:Ignorable="d"
+        Title="Изменить запись" Height="387.572" Width="339.595" Loaded="Window_Loaded">
+    <Grid>
+        <Label Content="*Номер:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="*Фамилия:" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top"/>
+        <Label Content="*Имя:" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top"/>
+        <Label Content="Отчество:" HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top"/>
+        <Label Content="*Команда:" HorizontalAlignment="Left" Margin="10,114,0,0" VerticalAlignment="Top"/>
+        <Label Content="*Количество сыгранных сезонов:" HorizontalAlignment="Left" Margin="10,140,0,0" VerticalAlignment="Top"/>
+        <Label Content="Число заброшенных шайб:" HorizontalAlignment="Left" Margin="10,166,0,0" VerticalAlignment="Top"/>
+        <Label Content="Количество голевых передач:" HorizontalAlignment="Left" Margin="10,192,0,0" VerticalAlignment="Top"/>
+        <Label Content="Штрафное время:" HorizontalAlignment="Left" Margin="10,218,0,0" VerticalAlignment="Top"/>
+        <Label Content="*Количество сыгранных матчей:" HorizontalAlignment="Left" Margin="10,244,0,0" VerticalAlignment="Top"/>
+        <Button Content="Изменить запись" HorizontalAlignment="Left" Margin="29,310,0,0" VerticalAlignment="Top" Width="114" Click="Change_Click"/>
+        <Button Content="Отмена" HorizontalAlignment="Left" Margin="227,310,0,0" VerticalAlignment="Top" Width="75" Click="Cancel_Click"/>
+        <TextBox x:Name="ID" IsEnabled="False" HorizontalAlignment="Left" Height="19" Margin="73,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="SecondName" HorizontalAlignment="Left" Height="19" Margin="77,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="FirstName" HorizontalAlignment="Left" Height="19" Margin="51,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="MiddleName" HorizontalAlignment="Left" Height="19" Margin="78,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="PlayTeam" MaxLength="3" HorizontalAlignment="Left" Height="19" Margin="198,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Washers" MaxLength="3" HorizontalAlignment="Left" Height="19" Margin="174,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Assists" MaxLength="3" HorizontalAlignment="Left" Height="19" Margin="189,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="PenaltyTime" HorizontalAlignment="Left" Height="19" Margin="123,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Matches" MaxLength="3" HorizontalAlignment="Left" Height="19" Margin="198,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Параметрые, отмеченные '*' - обязательные" HorizontalAlignment="Left" Margin="37,279,0,0" VerticalAlignment="Top" Width="257"/>
+        <ComboBox x:Name="Team" HorizontalAlignment="Left" Margin="81,120,0,0" VerticalAlignment="Top" Width="120" Height="20">
+            <ComboBoxItem Content="Динамо"/>
+            <ComboBoxItem Content="Спартак"/>
+        </ComboBox>
+
+    </Grid>
+</Window>
